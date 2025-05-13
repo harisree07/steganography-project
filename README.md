@@ -1,3 +1,4 @@
+```c
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -6,13 +7,10 @@
 #define NULL_BYTE "00000000"
 #define BIN_LEN 1000
 #define MESG_LEN 200
+
 void binconv(char ch, char *bin) {
     for (int i = 7; i >= 0; i--) {
-        if (ch & (1 << i)) {
-            bin[7 - i] = '1';
-        } else {
-            bin[7 - i] = '0';
-        }
+        bin[7 - i] = (ch & (1 << i)) ? '1' : '0';
     }
     bin[8] = '\0';
 }
@@ -116,3 +114,6 @@ BMPFile readfile(const char *filename) {
     }
     return 0;
 }
+
+
+
