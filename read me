@@ -1,0 +1,21 @@
+# 🕵️‍♂️ Steganography in C
+
+A lightweight steganography tool written in C that hides and extracts secret messages in BMP image files using **Least Significant Bit (LSB)** manipulation.
+
+---
+
+## 📦 Features
+
+- Encode secret text messages into `.bmp` images
+- Decode hidden messages from `.bmp` images
+- Works with 24-bit BMP files
+- Simple command-line interface
+- Pure C implementation
+
+---
+
+## 🛠️ How It Works
+
+The program modifies the **least significant bit (LSB)** of each byte in the pixel data of a BMP file to encode each bit of the secret message. The message is null-terminated (`\0`) during embedding to identify the end of the message during decoding.
+
+---
